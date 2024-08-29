@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function Update() {
   const { id } = useParams();
@@ -6,6 +6,8 @@ export default function Update() {
   return (
     <form>
       <h1>Update Blog {id}</h1>
+      <Link to={`/${id}/`}>Back</Link>
+      <br />
       <label htmlFor='title'>Title</label>
       <br />
       <input type='text' />
@@ -14,7 +16,7 @@ export default function Update() {
       <br />
       <textarea name='content'></textarea>
       <br />
-      <input type='submit' value='Create' />
+      <input type='submit' value='Update' />
     </form>
   );
 }

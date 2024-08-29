@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function Create() {
   return (
     <form>
       <h1>Create</h1>
+      <Link to='/'>Back</Link>
+      <br />
       <label htmlFor='title'>Title</label>
       <br />
       <input type='text' />
